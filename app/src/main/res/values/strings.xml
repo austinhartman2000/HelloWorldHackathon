@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HelloWorldHackathon</string>
+    <string name="title_activity_item_info">item_info</string>
+</resources>
