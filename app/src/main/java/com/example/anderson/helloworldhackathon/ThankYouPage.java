@@ -16,5 +16,6 @@ public class ThankYouPage extends AppCompatActivity {
     public void returnHome(View v){
         Intent intent = new Intent(ThankYouPage.this, BuySellPage.class);
         startActivity(intent);
+        System.out.println("whoa");
     }
 }
