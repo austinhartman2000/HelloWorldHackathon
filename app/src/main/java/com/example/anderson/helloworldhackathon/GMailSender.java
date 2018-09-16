@@ -1,23 +1,41 @@
 package com.example.anderson.helloworldhackathon;
 
 import javax.activation.DataHandler;
+
 import javax.activation.DataSource;
+
 import javax.activation.FileDataSource;
+
 import javax.mail.BodyPart;
+
 import javax.mail.Message;
+
 import javax.mail.Multipart;
+
 import javax.mail.PasswordAuthentication;
+
 import javax.mail.Session;
+
 import javax.mail.Transport;
+
 import javax.mail.internet.InternetAddress;
+
 import javax.mail.internet.MimeBodyPart;
+
 import javax.mail.internet.MimeMessage;
+
 import javax.mail.internet.MimeMultipart;
+
 import java.io.ByteArrayInputStream;
+
 import java.io.IOException;
+
 import java.io.InputStream;
+
 import java.io.OutputStream;
+
 import java.security.Security;
+
 import java.util.Properties;
 
 
@@ -36,7 +54,6 @@ public class GMailSender extends javax.mail.Authenticator {
     private Multipart _multipart = new MimeMultipart();
 
     static {
-
 
         Security.addProvider(new JSSEProvider());
 

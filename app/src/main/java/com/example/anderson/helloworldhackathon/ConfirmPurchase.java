@@ -1,5 +1,6 @@
 package com.example.anderson.helloworldhackathon;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.app.Activity;
@@ -69,7 +70,8 @@ public class ConfirmPurchase extends OrdersArray {
                                     email);
                             System.out.println("success");
 
-
+                            Intent intent = new Intent(ConfirmPurchase.this, ThankYouPage.class);
+                            startActivity(intent);
 
 
 
