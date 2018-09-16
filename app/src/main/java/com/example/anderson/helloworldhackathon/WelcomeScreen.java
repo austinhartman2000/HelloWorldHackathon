@@ -61,23 +61,23 @@ public class WelcomeScreen extends AppCompatActivity {
     }
 
     /** Called when the user taps the Send button */
-    public void onLogin(View view) {
-        System.out.println("Entered method");
-        String username = UsernameEt.getText().toString();
-        String password = PasswordEt.getText().toString();
-        String type = "login";
+        public void onLogin(View view) {
+            System.out.println("Entered method");
+            String username = UsernameEt.getText().toString();
+            String password = PasswordEt.getText().toString();
+            String type = "login";
 
-        TextView invalidCredentials = (TextView) findViewById(R.id.invalid);
+            TextView invalidCredentials = (TextView) findViewById(R.id.invalid);
 
-        BackgroundWorker backgroundWorker = new BackgroundWorker(this, invalidCredentials, WelcomeScreen.this);
-        backgroundWorker.execute(type,username,password);
-        System.out.println("found");
+            BackgroundWorker backgroundWorker = new BackgroundWorker(this, invalidCredentials, WelcomeScreen.this);
+            backgroundWorker.execute(type,username,password);
+            System.out.println("found");
 
-        System.out.println("result is: " + backgroundWorker.answer);
+            System.out.println("result is: " + backgroundWorker.answer);
 
-        String res = backgroundWorker.answer;
+            String res = backgroundWorker.answer;
 
-        System.out.println("RES is: " + res);
+            System.out.println("RES is: " + res);
 
 //            if(res.equals("login success")){
 //                Intent intent = new Intent(WelcomeScreen.this, BuySellPage.class);
@@ -90,9 +90,9 @@ public class WelcomeScreen extends AppCompatActivity {
 
 
 
+        }
+
+
     }
-
-
-}
 
 
