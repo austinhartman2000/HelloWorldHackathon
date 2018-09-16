@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class WelcomeScreen extends AppCompatActivity {
 
+    EditText UsernameEt, PasswordEt;
 
 
     @Override
@@ -18,27 +19,18 @@ public class WelcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
 
-
+        UsernameEt = (EditText)findViewById(R.id.etUserName);
+        PasswordEt = (EditText)findViewById(R.id.etPassword);
     }
 
     /** Called when the user taps the Send button */
 
-    public void login(View view) {
-
-        EditText username = (EditText) findViewById(R.id.editText);
-        EditText password = (EditText) findViewById(R.id.editText2);
-
-        String user = username.getText().toString();
-        String pass = username.getText().toString();
-
-        if((!user.matches("")) && (!pass.equals(""))){
-            Intent intent = new Intent(WelcomeScreen.this, BuySellPage.class);
-            startActivity(intent);
-        }else {
-            TextView noCredentials = (TextView) findViewById(R.id.textView13);
-            noCredentials.setVisibility((int) 1);
-        }
-
+    public void onLogin(View view) {
+        String username = UsernameEt.getText().toString();
+        String password = PasswordEt.getText().toString();
+        String type = "login";
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        backgroundWorker.execute(type,username,password);
 
 
 
