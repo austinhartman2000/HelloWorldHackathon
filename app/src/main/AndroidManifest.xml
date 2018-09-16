@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.anderson.helloworldhackathon">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,7 +32,11 @@
         <activity android:name=".EnterProductInfo" />
         <activity android:name=".TakePhoto"></activity>
 
+
+
     </application>
+
+
 
 
 
