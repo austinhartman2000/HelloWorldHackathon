@@ -2,7 +2,6 @@ package com.example.anderson.helloworldhackathon;
 
 import android.app.AlertDialog;
 import android.content.Context;
-<<<<<<< HEAD
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.AttributeSet;
@@ -11,9 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParser;
-=======
-import android.os.AsyncTask;
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -30,7 +26,6 @@ import java.net.URLEncoder;
 public class BackgroundWorker extends AsyncTask<String,Void,String> {
     Context context;
     AlertDialog alertDialog;
-<<<<<<< HEAD
     public String answer;
     TextView textView;
     Context view;
@@ -46,15 +41,6 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
         String result="";
         String type = params[0];
         String login_url = "http://10.186.162.233:80/login.php";
-=======
-    BackgroundWorker(Context ctx){
-        context = ctx;
-    }
-    @Override
-    protected String doInBackground(String... params) {
-        String type = params[0];
-        String login_url = "http://12.34.56.78:80/login.php";
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c
         if(type.equals("login")){
             try {
                 String user_name = params[1];
@@ -73,48 +59,32 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
                 outputStream.close();
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
-<<<<<<< HEAD
                 String line = "";
                 while((line= bufferedReader.readLine()) != null){
                     result += line;
                     this.answer+=line;
-=======
-                String result = "";
-                String line = "";
-                while((line= bufferedReader.readLine()) != null){
-                    result += line;
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c
                 }
                 bufferedReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
-<<<<<<< HEAD
                 System.out.println(result);
                 //this.answer = result;
                 //return result;
-=======
-                return result;
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c
             }catch(MalformedURLException e){
                 e.printStackTrace();
             }catch(IOException e){
                 e.printStackTrace();
             }
         }
-<<<<<<< HEAD
         //this.answer=result;
         return result;
         //return null;
-=======
-        return null;
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c
     }
     protected void onPreExecute(){
         alertDialog = new AlertDialog.Builder(context).create();
         alertDialog.setTitle("Login Status");
     }
     protected void onPostExecute(String result){
-<<<<<<< HEAD
         System.out.println("1:" + this.answer);
         alertDialog.setMessage(result);
         System.out.println("About to show");
@@ -128,15 +98,10 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
             textView.setVisibility((int) 1);
         }
 
-=======
-        alertDialog.setMessage(result);
-        alertDialog.show();
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c
     }
     protected void onProgressUpdate(Void... values){
         super.onProgressUpdate(values);
     }
-<<<<<<< HEAD
 
     protected String getResult(){
         System.out.println("Getter says: " + this.answer);
@@ -147,6 +112,3 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
 }
 
 
-=======
-}
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c

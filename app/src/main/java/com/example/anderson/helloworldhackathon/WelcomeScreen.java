@@ -47,11 +47,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-<<<<<<< HEAD
 public class WelcomeScreen extends AppCompatActivity {
-=======
-    EditText UsernameEt, PasswordEt;
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c
 
     EditText UsernameEt, PasswordEt;
 
@@ -60,42 +56,28 @@ public class WelcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
 
-<<<<<<< HEAD
         UsernameEt = (EditText)findViewById(R.id.editText2);
         PasswordEt = (EditText)findViewById(R.id.editText);
-=======
-        UsernameEt = (EditText)findViewById(R.id.etUserName);
-        PasswordEt = (EditText)findViewById(R.id.etPassword);
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c
     }
 
     /** Called when the user taps the Send button */
-        public void onLogin(View view) {
-            System.out.println("Entered method");
-            String username = UsernameEt.getText().toString();
-            String password = PasswordEt.getText().toString();
-            String type = "login";
-
-<<<<<<< HEAD
-            TextView invalidCredentials = (TextView) findViewById(R.id.invalid);
-
-            BackgroundWorker backgroundWorker = new BackgroundWorker(this, invalidCredentials, WelcomeScreen.this);
-            backgroundWorker.execute(type,username,password);
-            System.out.println("found");
-
-            System.out.println("result is: " + backgroundWorker.answer);
-
-            String res = backgroundWorker.answer;
-
-            System.out.println("RES is: " + res);
-=======
     public void onLogin(View view) {
+        System.out.println("Entered method");
         String username = UsernameEt.getText().toString();
         String password = PasswordEt.getText().toString();
         String type = "login";
-        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+
+        TextView invalidCredentials = (TextView) findViewById(R.id.invalid);
+
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this, invalidCredentials, WelcomeScreen.this);
         backgroundWorker.execute(type,username,password);
->>>>>>> 9779467d166d37b8a14a0ab019c477aad956833c
+        System.out.println("found");
+
+        System.out.println("result is: " + backgroundWorker.answer);
+
+        String res = backgroundWorker.answer;
+
+        System.out.println("RES is: " + res);
 
 //            if(res.equals("login success")){
 //                Intent intent = new Intent(WelcomeScreen.this, BuySellPage.class);
@@ -108,9 +90,9 @@ public class WelcomeScreen extends AppCompatActivity {
 
 
 
-        }
-
-
     }
+
+
+}
 
 
