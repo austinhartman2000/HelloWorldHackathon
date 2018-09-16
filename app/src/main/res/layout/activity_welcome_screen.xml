@@ -50,7 +50,6 @@
             android:textColor="#000000"/>
 
     <EditText
-<<<<<<< HEAD
         android:id="@+id/edPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -105,7 +104,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginPageTitle"
         tools:text="Please enter valid credentials." />
-=======
+    <EditText
             android:id="@+id/editText"
             android:layout_width="320dp"
             android:layout_height="75dp"
@@ -139,6 +138,5 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             />
->>>>>>> 4175d99d792e47db19d767ce2ad94d8d2d10aa1e
 </android.support.constraint.ConstraintLayout>
 
